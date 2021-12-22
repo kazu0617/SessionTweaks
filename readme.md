@@ -3,8 +3,7 @@
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/)  
 Add buttons for session orb / copy session uri.
 
-I didn't create an issue because of a limited issue for me, but I did.
-https://github.com/Neos-Metaverse/NeosPublic/issues/3468
+I create an issue https://github.com/Neos-Metaverse/NeosPublic/issues/3468 but Neos might be complitely re-created for Contacts and it takes a lot of time, so I created this mod.
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).

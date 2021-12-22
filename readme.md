@@ -12,4 +12,3 @@ I create an issue https://github.com/Neos-Metaverse/NeosPublic/issues/3468 but N
 
 ## ScreenShots
 ![](SessionTweaks.png)
-The right one is [MessageCopy](https://github.com/rassi0429/MessageCopy).

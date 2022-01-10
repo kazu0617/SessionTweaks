@@ -13,7 +13,7 @@ namespace SessionTweaks
     {
         public override string Name => "SesisonTweaks";
         public override string Author => "kazu0617";
-        public override string Version => "2.0.0";
+        public override string Version => "2.0.1";
         public override string Link => "https://github.com/kazu0617/SessionTweaks"; // this line is optional and can be omitted
 
         public override void OnEngineInit()
@@ -127,7 +127,7 @@ namespace SessionTweaks
             {
                 if (message.MessageType == CloudX.Shared.MessageType.SessionInvite)
                 {
-                    Msg("Invite");
+                    Debug("Invite");
                     List<Slot> child = ___messagesUi.Current.GetAllChildren();
                     foreach (Slot c in child)
                     {

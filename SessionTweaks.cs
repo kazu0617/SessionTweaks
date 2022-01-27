@@ -127,7 +127,6 @@ namespace SessionTweaks
             {
                 if (message.MessageType == CloudX.Shared.MessageType.SessionInvite)
                 {
-                    Debug("Invite");
                     List<Slot> child = ___messagesUi.Current.GetAllChildren();
                     foreach (Slot c in child)
                     {

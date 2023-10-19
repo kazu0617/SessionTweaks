@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <Reference Include="CloudX.Shared">
-      <HintPath>$(GameRefsPath)CloudX.Shared.dll</HintPath>
+    <Reference Include="SkyFrost.Base">
+      <HintPath>$(GameRefsPath)SkyFrost.Base.dll</HintPath>
     </Reference>
-		<Reference Include="BaseX">
-      <HintPath>$(GameRefsPath)BaseX.dll</HintPath>
+		<Reference Include="Elements.Core">
+      <HintPath>$(GameRefsPath)Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
       <HintPath>$(GameRefsPath)FrooxEngine.dll</HintPath>

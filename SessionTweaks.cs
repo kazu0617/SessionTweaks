@@ -11,7 +11,7 @@ namespace SessionTweaks
 {
     public class SessionTweaks : ResoniteMod
     {
-        public override string Name => "SesisonTweaks";
+        public override string Name => "SessionTweaks";
         public override string Author => "kazu0617";
         public override string Version => "3.0.1";
         public override string Link => "https://github.com/kazu0617/SessionTweaks"; // this line is optional and can be omitted

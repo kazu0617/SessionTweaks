@@ -1,4 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="./Default.props"/>
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="SkyFrost.Base">
       <HintPath>$(GameRefsPath)SkyFrost.Base.dll</HintPath>
@@ -8,6 +14,12 @@
     </Reference>
     <Reference Include="FrooxEngine">
       <HintPath>$(GameRefsPath)FrooxEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$([System.IO.File]::Exists('$(GameRefsPath)MonkeyLoader\0Harmony.dll') ? '$(GameRefsPath)MonkeyLoader\0Harmony.dll' : '$(GameRefsPath)rml_libs\0Harmony.dll')</HintPath>
+    </Reference>
+    <Reference Include="ResoniteModLoader">
+      <HintPath>$(GameRefsPath)\Libraries\ResoniteModLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

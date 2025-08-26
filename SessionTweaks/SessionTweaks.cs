@@ -10,11 +10,10 @@ namespace SessionTweaks
 {
     public class SessionTweaks : ResoniteMod
     {
-        public override string Name => "SessionTweaks";
-        public override string Author => "kazu0617";
-        public override string Version => "4.0.0";
-        public override string Link => "https://github.com/kazu0617/SessionTweaks";
-
+        public override string Name => BuildInfo.Name;
+        public override string Author => BuildInfo.Author;
+        public override string Version => BuildInfo.Version;
+        public override string Link => BuildInfo.Link;
         [AutoRegisterConfigKey]
         private static readonly ModConfigurationKey<bool> Enable = new("enabled", "Enables this mod. this config must re-start all.", () => true);
         [AutoRegisterConfigKey]

@@ -1,36 +1,29 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
-// 制御されます。アセンブリに関連付けられている情報を変更するには、
-// これらの属性値を変更してください。
-[assembly: AssemblyTitle("SessionTweaks")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SessionTweaks")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-// ComVisible を false に設定すると、このアセンブリ内の型は COM コンポーネントから
-// 参照できなくなります。COM からこのアセンブリ内の型にアクセスする必要がある場合は、
-// その型の ComVisible 属性を true に設定してください。
+// General Information about an assembly is controlled through the following
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
 [assembly: ComVisible(false)]
+[assembly: AssemblyTitle(SessionTweaks.BuildInfo.Name)]
+[assembly: AssemblyDescription(SessionTweaks.BuildInfo.Description)]
+[assembly: AssemblyCompany("net.kazu0617")]
+[assembly: AssemblyProduct(SessionTweaks.BuildInfo.GUID)]
+[assembly: AssemblyVersion(SessionTweaks.BuildInfo.Version)]
 
-// このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("468d522c-6ea4-4cec-940d-4065459dbc68")]
+namespace SessionTweaks
+{
+	public static class BuildInfo
+	{
+		public const string Version = "5.0.0";
 
-// アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
-//
-//      メジャー バージョン
-//      マイナー バージョン
-//      ビルド番号
-//      リビジョン
-//
-// すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
-// 既定値にすることができます:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.0.0")]
-[assembly: AssemblyFileVersion("4.0.0")]
+		public const string Name = "SessionTweaks";
+		public const string Description = "Add buttons for session orb / join without focusing / copy session uri.";
+
+		public const string Author = "kazu0617";
+
+		public const string Link = "https://github.com/kazu0617/SessionTweaks";
+
+		public const string GUID = "net.kazu0617.SessionTweaks";
+	}
+}

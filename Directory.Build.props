@@ -1,0 +1,40 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <BaseOutputPath>..\bin</BaseOutputPath>
+    <BuildProjectReferences>false</BuildProjectReferences>
+    <Deterministic>true</Deterministic>
+    <CopyLocal>false</CopyLocal>
+    <CopyToMods Condition="'$(CopyToMods)'==''">false</CopyToMods>
+		<ResonitePath>$(MSBuildThisFileDirectory)Resonite</ResonitePath>
+    <ResonitePath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll')">C:\Program Files (x86)\Steam\steamapps\common\Resonite\</ResonitePath>
+    <ResonitePath Condition="Exists('C:\Resonite\app\Libraries\ResoniteModLoader.dll')">C:\Resonite\app\</ResonitePath>
+    <ResonitePath Condition="Exists('R:\SteamLibrary\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll')">R:\SteamLibrary\steamapps\common\Resonite\</ResonitePath>
+    <ResonitePath Condition="Exists('$(HOME)/.local/share/Steam/steamapps/common/Resonite/Libraries/ResoniteModLoader.dll')">$(HOME)/.local/share/Steam/steamapps/common/Resonite/</ResonitePath>
+    <ResonitePath Condition="Exists('/home/kazu/.local/share/Steam/steamapps/common/Resonite/Libraries/ResoniteModLoader.dll')">/home/kazu/.local/share/Steam/steamapps/common/Resonite/</ResonitePath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugSymbols Condition="'$(Configuration)'=='Release'">false</DebugSymbols>
+    <DebugType Condition="'$(Configuration)'=='Release'">None</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ResoniteModLoader">
+      <HintPath>$(ResonitePath)Libraries/ResoniteModLoader.dll</HintPath>
+    </Reference>
+    <PackageReference Include="Lib.Harmony" Version="2.4.0" />
+  </ItemGroup>
+
+
+  <!-- make all references non-private, so they won't be copied to the output folder -->
+  <Target Name="ClearReferenceCopyLocalPaths" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(CopyToMods)'=='true'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ResonitePath)rml_mods" />
+  </Target>
+</Project>

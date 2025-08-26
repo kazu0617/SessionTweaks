@@ -1,0 +1,77 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build DesktopToolShortcutRemapper",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "-noLogo",
+                "${workspaceFolder}/DesktopToolShortcutRemapper/DesktopToolShortcutRemapper.csproj",
+                "-p:Configuration=Release",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build SessionTweaks",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "-noLogo",
+                "-p:Configuration=Release",
+                "${workspaceFolder}/SessionTweaks/SessionTweaks.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ResoniteMod.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ResoniteMod.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/ResoniteMod.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

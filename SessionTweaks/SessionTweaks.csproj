@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <Reference Include="SkyFrost.Base">
-      <HintPath>$(GameRefsPath)SkyFrost.Base.dll</HintPath>
+      <HintPath>$(ResonitePath)SkyFrost.Base.dll</HintPath>
     </Reference>
 		<Reference Include="Elements.Core">
-      <HintPath>$(GameRefsPath)Elements.Core.dll</HintPath>
+      <HintPath>$(ResonitePath)Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
-      <HintPath>$(GameRefsPath)FrooxEngine.dll</HintPath>
+      <HintPath>$(ResonitePath)FrooxEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

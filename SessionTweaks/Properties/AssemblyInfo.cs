@@ -15,7 +15,7 @@ namespace SessionTweaks
 {
 	public static class BuildInfo
 	{
-		public const string Version = "5.0.0";
+		public const string Version = "5.1.0";
 
 		public const string Name = "SessionTweaks";
 		public const string Description = "Add buttons for session orb / join without focusing / copy session uri.";

@@ -11,6 +11,7 @@
     <ResonitePath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll')">C:\Program Files (x86)\Steam\steamapps\common\Resonite\</ResonitePath>
     <ResonitePath Condition="Exists('C:\Resonite\app\Libraries\ResoniteModLoader.dll')">C:\Resonite\app\</ResonitePath>
     <ResonitePath Condition="Exists('R:\SteamLibrary\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll')">R:\SteamLibrary\steamapps\common\Resonite\</ResonitePath>
+    <ResonitePath Condition="Exists('P:\SteamLibrary\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll')">P:\SteamLibrary\steamapps\common\Resonite\</ResonitePath>
     <ResonitePath Condition="Exists('$(HOME)/.local/share/Steam/steamapps/common/Resonite/Libraries/ResoniteModLoader.dll')">$(HOME)/.local/share/Steam/steamapps/common/Resonite/</ResonitePath>
     <ResonitePath Condition="Exists('/home/kazu/.local/share/Steam/steamapps/common/Resonite/Libraries/ResoniteModLoader.dll')">/home/kazu/.local/share/Steam/steamapps/common/Resonite/</ResonitePath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
